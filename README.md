@@ -20,4 +20,13 @@ This scripts helps user to run batch job with local file.
    --scratchDir SCRATCH_DIR         SCRATCH DIRECTORY
    -g                               Grid certificate is required
 </code></pre>
+
+For example,
+<pre><code>
+./create-batch --jobName JPSI --fileList filelist.txt --maxFiles 100 --cfg pat_cfg.py -g
+</code></pre>
+This command will make JPSI-<time> directory. 
+Then, script will split 100 files per 1 job.
+"-g" options must be used for xrootd files.( root://uosaf0007.sscc.uos.ac.kr~~ or /store/ )
+
     
