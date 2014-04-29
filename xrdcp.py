@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import os,sys
-
+import copy
 ### Select host
 
 storage_hostname = "uosaf0007.sscc.uos.ac.kr"    # UOS
@@ -18,8 +18,9 @@ print sys.argv
 cmd = "xrd "+storage_hostname+" ls "+dir_name
 lists = os.popen(cmd)
 data = []
-total = len(lists.readlines())
-for count, line in enumerate(lists.readlines()) :
+ss_lists = lists.readlines()
+total = len(ss_lists)
+for count, line in enumerate( ss_lists ) :
 	if ( len(line.split()) == 5 ) :
 		#print line.split()
 		data_file = (protocol+storage_hostname+"/"+line.split()[4])
