@@ -27,11 +27,12 @@ For example,
 </code></pre>
 This command will make JPSI + "time" directory. 
 
-Then, script will split 100 files per 1 job with filelist.txt.
+Then, the script will split 100 files per 1 job using filelist.txt.
 
 "-g" options must be used for xrootd files.( root://uosaf0007.sscc.uos.ac.kr~~ or /store/ )
 
-fileList must be include path of data files like cmssw input source list.
+## fileList
+"fileListt" must be include path of data files like cmssw input source list.
 
 ### Physics File Name
 <pre><code>
