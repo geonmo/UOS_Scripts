@@ -46,18 +46,26 @@ while i < len(sys.argv)-1:
         args.append(arg)
 
 ## Mandatory options
-if '--jobName' not in opts: usage()
+if '--jobName' not in opts: 
+	print "--jobName error."
+	usage()
 uniqueID = datetime.strftime(datetime.now(), "%Y%m%d-%H%M%S")
 jobName = opts['--jobName']+"-"+uniqueID
 jobDir = os.path.abspath(jobName)
-if '--fileList' not in opts: usage()
+if '--fileList' not in opts: 
+	print "--fileList error."
+	usage()
 fileList = opts['--fileList']
 if not os.path.exists(fileList):
     print "ERROR: Cannot find file list", fileList
     sys.exit()
-if '--maxFiles' not in opts: usage()
+if '--maxFiles' not in opts: 
+	print "maxFiles error"
+	usage()
 maxFiles = int(opts['--maxFiles'])
-if '--cfg' not in opts: usage()
+if '--cfg' not in opts: 
+	print "cfg error"
+	usage()
 cfgFileName = opts['--cfg']
 if '_cfg.py' != cfgFileName[-min(7,len(cfgFileName)):]: usage()
 if not os.path.exists(cfgFileName):
