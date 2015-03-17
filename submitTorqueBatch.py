@@ -78,36 +78,6 @@ if __name__ == "__main__" :
   sb = submitBatch()
   sb.Ana()
   sb.Print()
-  #gen.Ana(filename)
-
-
-"""
-target = sys.argv[1]
-if target[-1] =="/":
-  target = target[:-1]
-
-
-
-f_list = os.listdir(target)
-ipath = os.getcwd()+"/"+target
-
-ana_path = os.getcwd()
-
-print "ipath : %s, ana_path : %s\n"%(ipath,ana_path)
-"""
-"""
-q_txt = os.listdir(target)
-    
-os.chdir(itime_dir)
-for x in q_txt:
-  if x.endswith(".txt"):
-    tmp_sc = open(itime_dir+"/"+x[:-4]+".cmd","w")
-    tmp_sc.write(script_head)
-    tmp_sc.write("\ncd "+itime_dir+"\n")
-    tmp_sc.write("python /pnfs/user/geonmo/catJpsi/src/JpsiAngle/calAngle.py "+ipath+"/"+x+" "+itime_dir+"/"+x[:-4]+".root")
-    tmp_sc.close()
-    os.system("qsub -q batch6 "+itime_dir+"/"+x[:-4]+".cmd")
-"""
 
 
 
