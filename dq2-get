@@ -1,0 +1,2 @@
+#!/bin/sh
+xrdcp -d 1 -f root://cms-xrd-global.cern.ch/$1 .

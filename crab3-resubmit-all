@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+import os,sys
+
+list_dirs = os.listdir(".")
+selected_dirs =[]
+for dir in list_dirs :
+  if ( dir.find("crab_") != -1 ) :
+    selected_dirs.append( dir )
+
+for dir in selected_dirs :
+  cmd = "crab resubmit -d %s"%(dir)
+  os.system(cmd)
+
